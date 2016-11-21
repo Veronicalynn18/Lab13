@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app="talkALot">
+<head>
+    <meta charset="utf-8">
+	<title>Six Year Old Simulator</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="library/jquery-1.11.1.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
+</head>
+<body ng-controller="makeWordsController">
+    <h1>Doug Funnie's World</h1>
+	 <div>
+        <!--  Make 4 buttons with a different ng-click value -->
+          <button ng-click='addWord()' type="button" class="button">Words</button>
+          <button ng-click='addDecorativeWord()' type="button" class="button">Words with Decorations</button> 
+          <button ng-click='addMoreWords()' type="button" class="button">More Words</button> 
+          <button ng-click='addMoreDecoration()' type="button" class="button">More Words with Decorations</button>    
+         <ul>
+
+         <!-- Below, the ngClass directive allows you to dynamically set CSS classes on an HTML element by databinding an expression that represents all classes to be added. -->
+         <!-- li ng-repeat="item in emptyWordArray" is taking the variable declared in my app.js and putting it into the object called emptyWordArray. -->
+
+             <li ng-repeat="item in emptyWordArray" class="ng-class : {{item.decoration}}">{{item.word}}</li>
+         </ul>
+     </div>
+     <embed src="KillerTofu.mp3" autostart="true" loop="true" width="2" height="0">
+    </embed>
+
+
+ 	<script src="library/angular.min.js"></script>
+    <script src="library/angular-route.min.js"></script>
+    <script src="app.js"></script>
+
+</body>
+</html>
